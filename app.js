@@ -12,7 +12,7 @@
 
 const searchSong = () => {
     const searchText = document.getElementById('search-field').value;
-    const url = `http://api.lyrics.ovh/suggest/${searchText}`;
+    const url = `https://api.lyrics.ovh/suggest/${searchText}`;
     fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -53,7 +53,7 @@ const displaySongs = songs => {
 //     displayLyrics(data.lyrics);
 
 const getLyric = (artist, title) => {
-    const url = `http://api.lyrics.ovh/v1/${artist}/${title}`;
+    const url = `https://api.lyrics.ovh/v1/${artist}/${title}`;
     fetch(url)
         .then(res => res.json())
         .then(data => {
